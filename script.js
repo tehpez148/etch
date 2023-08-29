@@ -1,17 +1,18 @@
 const container = document.getElementById('grid');
 
-/*
-function makeDivs(numDivs) 
-*/
+
+function makeDivs(numDivs) {
+for (let d=0; d < numDivs; d++){
 
 
-const cells = document.createElement('div');
-cells.style.backgroundColor = 'grey';
-cells.style.border = 'black';
-cells.style.width = 'auto';
-cells.style.height = 'auto';
+    const cells = document.createElement('div');
+    cells.classList.add('cells');
+    container.appendChild(cells);
 
+}
+}
 
-container.appendChild(cells);
+makeDivs(4);
+
 
 
