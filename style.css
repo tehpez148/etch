@@ -6,7 +6,7 @@ body{
 #grid{
     width: 960px;
     height: 960px;
-    border-color: black;
+    border: 10px solid black;
 }
 
 .cells{
