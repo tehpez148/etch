@@ -4,17 +4,18 @@ body{
 }
 
 #grid{
-    width: 300px;
-    height: 300px;
+    width: 560px;
+    height: 560px;
     border: 10px solid black;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto);
+    grid-template-rows: repeat(auto);
 }
 
 .cells{
     background-color: grey;
     border: 0.5px solid red;
-    border-width: 10px;
+    border-width: 1px;
     display: inline-block;
 }
 
