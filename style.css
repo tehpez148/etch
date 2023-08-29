@@ -16,7 +16,7 @@ body{
 
 .cells{
     background-color: grey;
-    border: 0.5px solid red;
+    border: 0.5px solid azure;
     border-width: 1px;
     display: inline-block;
 }
