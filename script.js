@@ -1,8 +1,11 @@
 const container = document.getElementById('grid');
 
-for (const grid of document.querySelectorAll('#grid')) {
-    grid.style.setProperty('--cols', Math.ceil(Math.sqrt(grid.children.length)));
-  }
+
+
+var x = document.querySelector('#grid');
+x.style.setProperty('--x','4');
+
+
 
 function makeDivs(numDivs) {
 for (let d=0; d < numDivs; d++){
@@ -15,7 +18,7 @@ for (let d=0; d < numDivs; d++){
 }
 }
 
-makeDivs(9);
+makeDivs(16);
 
 
 

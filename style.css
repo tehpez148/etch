@@ -1,3 +1,5 @@
+
+
 body{
     padding:0;
     margin:10px;
@@ -8,8 +10,8 @@ body{
     height: 560px;
     border: 10px solid black;
     display: grid;
-    grid-template-columns: repeat(auto);
-    grid-template-rows: repeat(auto);
+    grid-template-columns: repeat(var(--x), auto);
+    grid-template-rows: repeat(var(--x), auto);
 }
 
 .cells{
