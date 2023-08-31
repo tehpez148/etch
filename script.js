@@ -1,17 +1,67 @@
 const container = document.getElementById('grid');
+var x = document.querySelector('#grid');
 
-var s = parseInt(document.getElementById("sides").value);
 
-const newGridButton = document.querySelector('#new');
-newGridButton.addEventListener('click', function() {
+
+const tenSides = document.getElementById('ten');
+const twentySides = document.getElementById('twenty');
+const thirtySides = document.getElementById('thirty');
+
+
+tenSides.addEventListener('click', function(){
     let gridPixels = container.querySelectorAll('div');
     gridPixels.forEach(gridPixel => gridPixel.remove());
     
-    makeDivs((s*s));
-    console.log(s);
+    makeDivs((10*10));
+    x.style.setProperty('--x',(10));
+
+    const items = document.querySelectorAll('.cells');
+
+    items.forEach((item) => {
+        item.addEventListener('mouseenter', (e) => {
+            e.target.style.backgroundColor = '#fa4';
+        });
+    });
+
+
+    console.log(items);
+
 });
-var x = document.querySelector('#grid');
-x.style.setProperty('--x',(s));
+
+twentySides.addEventListener('click', function(){
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.remove());
+    
+    makeDivs((20*20));
+    x.style.setProperty('--x',(20));
+
+    const items = document.querySelectorAll('.cells');
+
+    items.forEach((item) => {
+        item.addEventListener('mouseenter', (e) => {
+            e.target.style.backgroundColor = '#fa4';
+        });
+});
+
+});
+
+thirtySides.addEventListener('click', function(){
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.remove());
+    
+    makeDivs((30*30));
+    x.style.setProperty('--x',(30));
+
+    const items = document.querySelectorAll('.cells');
+
+    items.forEach((item) => {
+        item.addEventListener('mouseenter', (e) => {
+            e.target.style.backgroundColor = '#fa4';
+        });
+    });
+});
+
+
 
 
 
@@ -25,3 +75,23 @@ for (let d=0; d < numDivs; d++){
 }};
 
 
+
+
+console.log(length(items));
+
+/**
+function changeColor(){
+    boxes.style.backgroundColor = "#fa4";
+};
+
+
+ Old way of making divs using slider/number input, not sure how to make it work lol 
+const newGridButton = document.querySelector('#new');
+newGridButton.addEventListener('click', function() {
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.remove());
+    
+    makeDivs((s*s));
+    console.log(s);;
+});
+**/
