@@ -1,10 +1,11 @@
 const container = document.getElementById('grid');
 
-var s = document.getElementById('sides');
+
+var s = parseInt(document.getElementById("sides").value);
 
 
 var x = document.querySelector('#grid');
-x.style.setProperty('--x',s);
+x.style.setProperty('--x',(s));
 
 
 
@@ -19,7 +20,8 @@ for (let d=0; d < numDivs; d++){
 }
 }
 
-makeDivs((s*s));
+
+makeDivs((s*s))
 
 
 

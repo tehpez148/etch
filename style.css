@@ -20,6 +20,10 @@ body{
     align-self: center;
 }
 
+#sides{
+    width: 3em;
+    height: 2em;
+}
 
 .cells{
     background-color: grey;
