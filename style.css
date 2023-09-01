@@ -6,6 +6,12 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    align-self: center;
+    text-decoration: underline;
 }
 
 #grid{
@@ -15,12 +21,18 @@ body{
     display: grid;
     grid-template-columns: repeat(var(--x), auto);
     grid-template-rows: repeat(var(--x), auto);
+    align-self: center;
 }
 
 
 .input{
     font-size: 25px;
     align-self: center;
+}
+
+button{
+    border-radius: 12px;
+    font-size: 25px;
 }
 
 #sides{
