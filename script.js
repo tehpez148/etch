@@ -2,6 +2,22 @@ const container = document.getElementById('grid');
 var x = document.querySelector('#grid');
 
 
+document.addEventListener('DOMContentLoaded', function(){
+    let gridPixels = container.querySelectorAll('div');
+    gridPixels.forEach(gridPixel => gridPixel.remove());
+    
+    makeDivs((10*10));
+    x.style.setProperty('--x',(10));
+
+    const items = document.querySelectorAll('.cells');
+
+    items.forEach((item) => {
+        item.addEventListener('mouseenter', (e) => {
+            e.target.style.backgroundColor = '#fa4';
+        });
+    });
+
+});
 
 const tenSides = document.getElementById('ten');
 const twentySides = document.getElementById('twenty');
@@ -77,7 +93,6 @@ for (let d=0; d < numDivs; d++){
 
 
 
-console.log(length(items));
 
 /**
 function changeColor(){
