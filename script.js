@@ -2,6 +2,7 @@ const container = document.getElementById('grid');
 var x = document.querySelector('#grid');
 let colour = '#fa4';
 
+//creating grid of cells on loadup
 document.addEventListener('DOMContentLoaded', function(){
     let gridPixels = container.querySelectorAll('div');
     gridPixels.forEach(gridPixel => gridPixel.remove());
@@ -23,12 +24,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-
+// creating variable for all side button
 const tenSides = document.getElementById('ten');
 const twentySides = document.getElementById('twenty');
 const thirtySides = document.getElementById('thirty');
 
 
+// functions that activate when number of sides are picked
 tenSides.addEventListener('click', function(){
     let gridPixels = container.querySelectorAll('div');
     gridPixels.forEach(gridPixel => gridPixel.remove());
@@ -85,7 +87,7 @@ thirtySides.addEventListener('click', function(){
 
 
 
-
+//function that make the grid with a given number of cells (same in x and y)
 function makeDivs(numDivs) {
 for (let d=0; d < numDivs; d++){
 
@@ -96,7 +98,18 @@ for (let d=0; d < numDivs; d++){
 }};
 
 
+const orange = document.getElementById('orange'); 
+const green = document.getElementById('green');
 
+green.addEventListener('click', function(){
+    colour='green';
+    console.log(colour);
+});
+
+orange.addEventListener('click', function(){
+    colour='#fa4';
+    console.log(colour);
+})
 
 
 /**
