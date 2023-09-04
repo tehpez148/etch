@@ -11,14 +11,17 @@ body{
     background-color: skyblue;
 }
 
-h1{
-    margin: auto;
-    
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #title{
     font-style: italic;
-    font-size: 50px;
+    font-size: 100px;
+    padding-bottom: 30px;
+    margin: auto;
 }
 
 #grid{
@@ -29,17 +32,32 @@ h1{
     grid-template-columns: repeat(var(--x), auto);
     grid-template-rows: repeat(var(--x), auto);
     align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
+
+
+h2{
+    font-size: 50px;
+
+}
 .input{
     font-size: 25px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: space-between;
 }
 
 button{
     border-radius: 12px;
-    font-size: 25px;
+    font-size: 35px;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom:10px
 }
 
 #sides{
