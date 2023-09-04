@@ -1,6 +1,6 @@
 const container = document.getElementById('grid');
 var x = document.querySelector('#grid');
-
+let colour = '#fa4';
 
 document.addEventListener('DOMContentLoaded', function(){
     let gridPixels = container.querySelectorAll('div');
@@ -13,11 +13,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
     items.forEach((item) => {
         item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = '#fa4';
+            e.target.style.backgroundColor = colour;
         });
     });
 
 });
+
+
+
+
+
 
 const tenSides = document.getElementById('ten');
 const twentySides = document.getElementById('twenty');
@@ -35,7 +40,7 @@ tenSides.addEventListener('click', function(){
 
     items.forEach((item) => {
         item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = '#fa4';
+            e.target.style.backgroundColor = colour;
         });
     });
 
@@ -55,7 +60,7 @@ twentySides.addEventListener('click', function(){
 
     items.forEach((item) => {
         item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = '#fa4';
+            e.target.style.backgroundColor = colour;
         });
 });
 
@@ -72,7 +77,7 @@ thirtySides.addEventListener('click', function(){
 
     items.forEach((item) => {
         item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = '#fa4';
+            e.target.style.backgroundColor = colour;
         });
     });
 });
