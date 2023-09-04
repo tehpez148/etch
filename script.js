@@ -100,6 +100,7 @@ for (let d=0; d < numDivs; d++){
 
 const orange = document.getElementById('orange'); 
 const green = document.getElementById('green');
+const random = document.getElementById('random');
 
 green.addEventListener('click', function(){
     colour='green';
@@ -110,6 +111,26 @@ orange.addEventListener('click', function(){
     colour='#fa4';
     console.log(colour);
 })
+
+random.addEventListener('click',function(){
+    colour = randColour();
+    console.log(colour);
+})
+
+
+
+
+function randColour(){
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+}
+
+
+
 
 
 /**
