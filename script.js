@@ -1,6 +1,6 @@
 const container = document.getElementById('grid');
 var x = document.querySelector('#grid');
-let colour = '#fa4';
+let colour = 'orange';
 
 //creating grid of cells on loadup
 document.addEventListener('DOMContentLoaded', function(){
@@ -12,9 +12,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const items = document.querySelectorAll('.cells');
 
-    items.forEach((item) => {
-        item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = colour;
+   items.forEach((item) => {
+        item.addEventListener('mouseenter', (e) => { 
+            if (colour === 'orange'){
+                e.target.style.backgroundColor = '#fa4';}
+            else if (colour === 'green') {
+                e.target.style.backgroundColor = 'green';}
+            else if (colour === 'random'){
+                e.target.style.backgroundColor = randColour();}
         });
     });
 
@@ -41,13 +46,19 @@ tenSides.addEventListener('click', function(){
     const items = document.querySelectorAll('.cells');
 
     items.forEach((item) => {
-        item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = colour;
+        item.addEventListener('mouseenter', (e) => { 
+            if (colour === 'orange'){
+                e.target.style.backgroundColor = '#fa4';}
+            else if (colour === 'green') {
+                e.target.style.backgroundColor = 'green';}
+            else if (colour === 'random'){
+                e.target.style.backgroundColor = randColour()
+                
+            };
+
         });
     });
 
-
-    console.log(items);
 
 });
 
@@ -61,10 +72,16 @@ twentySides.addEventListener('click', function(){
     const items = document.querySelectorAll('.cells');
 
     items.forEach((item) => {
-        item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = colour;
+        item.addEventListener('mouseenter', (e) => { 
+            if (colour === 'orange'){
+                e.target.style.backgroundColor = '#fa4';}
+            else if (colour === 'green') {
+                e.target.style.backgroundColor = 'green';}
+            else if (colour === 'random'){
+                e.target.style.backgroundColor = randColour()
+            };
         });
-});
+    });
 
 });
 
@@ -78,11 +95,18 @@ thirtySides.addEventListener('click', function(){
     const items = document.querySelectorAll('.cells');
 
     items.forEach((item) => {
-        item.addEventListener('mouseenter', (e) => {
-            e.target.style.backgroundColor = colour;
+        item.addEventListener('mouseenter', (e) => { 
+            if (colour === 'orange'){
+                e.target.style.backgroundColor = '#fa4';}
+            else if (colour === 'green') {
+                e.target.style.backgroundColor = 'green';}
+            else if (colour === 'random'){
+                e.target.style.backgroundColor = randColour()
+            };
         });
     });
 });
+
 
 
 
@@ -108,14 +132,14 @@ green.addEventListener('click', function(){
 });
 
 orange.addEventListener('click', function(){
-    colour='#fa4';
+    colour='orange';
     console.log(colour);
-})
+});
 
 random.addEventListener('click',function(){
-    colour = randColour();
+    colour = 'random';
     console.log(colour);
-})
+});
 
 
 
@@ -127,17 +151,13 @@ function randColour(){
         color += letters[Math.floor(Math.random() * 16)];
       }
       return color;
-}
-
-
-
-
-
-/**
-function changeColor(){
-    boxes.style.backgroundColor = "#fa4";
 };
 
+
+
+
+
+/** 
 
  Old way of making divs using slider/number input, not sure how to make it work lol 
 const newGridButton = document.querySelector('#new');
